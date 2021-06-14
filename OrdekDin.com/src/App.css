@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+ html,body
+{
+    
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+            /*  Main Home section */
+.home_container{
+    width: 100%;
+    
+}     
+.sms_img{
+    width: 70px;
+    position: fixed;
+    top: 80%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 3;
+}   
+.message_div.active{
+    width: 15%;
+    margin: 0 auto;
+    position: fixed;
+    top: 60%;
+    right: 11%;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+    padding: 5px;
+    transition: 350ms;
+} 
+.message_div{
+    position: fixed;
+    top: 80%;
+    right: -100%;
+    transition: 850ms;
+}
+@media(max-width: 769px){
+    .sms_img{
+        width: 50px;
+        right: 4%;
+    }
+    .message_div.active{
+        width: 50%;
+        margin: 0 auto;
+        position: fixed;
+        top: 60%;
+        right: 20%;
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(4px);
+        border-radius: 4px;
+        padding: 5px;
+    }
+}   
+            /*  Navbar Style  */
+.navbar_section{
+    width: 100%;
+    font-family: 'Arimo', sans-serif;
+ 
+}            
+nav{
+    width:80vw ;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}        
+.logo img{
+    width: 130px;
+} 
+  
+.nav_menu_bar {
+    background-color: rgba(255,255,255,0.2);
+    width: 150px;
+    height: 80%;
+     color: #000;
+    position: fixed;
+    padding:10px 20px;
+    color: #fff;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 3;
+    backdrop-filter: blur(4px);
+  }
+  .nav_menu_bar.active {
+    left: 0;
+    transition: 460ms;
+  }
+  .menu_bar.active{
+      display:none;
+  }
+  .nav_menu_bar li{
+      list-style:none;
+      margin-top:20px;
+  }
+  .nav_menu_bar li .nav_link{
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+     letter-spacing: 3px;
+      font-size:18px;
+
+  }
+  .closeBtn{
+      padding: 10px 10px;
+      outline:none;
+      border: none;
+      background: transparent;
+      color: #6c0092;
+      font-size: 25px;
+
+  }
+.nav_menu ul{
+    list-style: none;
+    display:flex;
+    margin-top: 13px;
+}
+.nav_menu ul li{
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: bold;
+}   
+.nav_links{
+    text-decoration: none !important;
+    color: #6c0092 ;
+}
+.log_btn button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #6c0092;
+    background:transparent;   
+    font-size:18px;
+    font-weight: bold;
+}
+.log_btn button:hover{
+    color: #ad277c;
+}
+@media(max-width: 769px){
+     nav{
+         width:90vw;
+         justify-content:space-between;
+     }
+        /* .nav_menu{
+            display: none;
+        } */
+}     
+ /* HOme Style */
+.home_section{
+    width: 100%;
+    height: 100%;     
+}
+.nav_link{
+    color: #000 !important;
+    text-decoration: none;
+}
+.links{
+    color: #fff !important;
+    text-decoration: none;
+}
+.main_header{
+    width: 100%;
+    height: 50vh;
+    background-image: url('../src//Component//ordekDin_img/background.jpg');
+    /* background-repeat: no-repeat;     */
+    background-position-x: center;
+    background-size: cover;
+    padding: 50px 80px;
+  
+}
+.select_box{
+ 
+    min-width: 300px;
+    height: 269px;
+    padding: 60px 30px;
+    background: #ad277c;
+}
+.select_bg{
+    background: #6c0092;
+    color: #fff;
+    outline:none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.select_bg:hover{
+    background: #fff;
+    color: #000
+}
+.drop_box{
+    width:150px;
+}
+
+.btn_div{
+    display: grid;
+    place-items: center;
+  
+}
+.create_bio_heading{
+    background:#6c0092;
+    padding: 25px 100px;
+    color: #fff;
+    outline:none;
+    border: none;
+    margin-top: 100px;
+    border-radius: 6px;
+    font-size: 30px;
+    transition: all .1s ease-out;
+}
+.create_bio_heading:hover{
+    background: #ad277c;
+}
+.bio_video_heading{
+    padding: 25px 70px;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin-top: 50px;
+    border-radius: 6px;
+    background:#5A0763;
+    box-shadow: 10px 10px -2px rgba(0,0,0,0.9);
+}
+.home_text_box1{
+    width: 70%;
+    margin: 130px auto;   
+}
+.home_text_box{
+    background:#EFF3F3;
+    width:100vw;
+}
+.home_text_box2{
+    width: 70%;
+    margin: 0px auto;
+    padding: 100px 0 ;
+}
+.search_btn{
+    background: #6c0092;
+    outline:none;
+   border: 1px solid #ad277c;
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius:5px;
+    margin-top: 10px;
+    font-size:16px;
+    font-weight: bold;
+    transition: 350ms;
+}
+.search_btn:hover{
+    background: #ad277c;
+    border: 1px solid #6c0092;
+}
+@media(max-width: 769px){
+   .main_header{
+       height:100%;
+       padding: 50px 20px  20px;
+   }
+   .select_box{
+       margin-top: 40px;
+   }
+    .create_bio_heading{
+        font-size:25px;
+        padding: 25px 50px ;
+    }
+    .bio_video_heading{
+       padding: 25px 40px;
+    }
+    .home_text_box1{
+        width: 86%;
+    }
+    .home_text_box2{
+        width: 86%;
+    }.bio_video_heading{
+        padding: 20px 40px
+    }
+}
+
+ /* About us  */
+ .our_purpose{
+     width:100vw;
+     height:270px;
+     background: linear-gradient(90deg,  #6c0092 , #ed3699) ; 
+
+ }
+ .heading{
+    padding-top: 110px;
+    font-size: 40px;
+    font-family: 'Hind Siliguri', sans-serif;
+ }
+ .text_div{
+     width: 70vw;
+     margin: 0 auto;
+ }
+ .hr_line{
+     width: 90vw;
+ }
+
+                                /* Ans Questing Div */
+
+.ans_question_content{
+    width:100vw;
+ 
+}
+.ans_content{
+    width: 80vw;
+    margin: 100px auto;
+}
+.qus_heading{
+    color: #5A1286;
+    background:#FBFBFF;
+}
+@media(max-width:768px){
+    .ans_content{
+        width: 90vw;
+        margin: 0px auto;
+    }
+}
+
+ /* Footer style */
+
+ .footer_content{
+     background: #6c0092;
+     width: 100vw;
+ }
+ .footer_text{
+     padding: 80px 20px;
+     width: 80vw;
+     margin: 0 auto;
+ }
+
+
+                    /*  Contact style */
+.contact-section{
+    width: 100vw;
+
+}                    
+.contact_heading{
+    background: linear-gradient(90deg,  #6c0092 , #ed3699) ;
+    width: 100vw;
+    height: 270px;
+    
+    display: grid;
+    place-items: center;
+}     
+.contact_heading h1{
+    font-size:45px;
+ 
+}    
+.form_div{
+    width: 40vw;
+    margin: 100px auto;
+}       
+.sendBtn{
+    padding: 6px 20px;
+    outline:none;
+    border: none;
+    color: #fff;
+    background: #6c0092;
+    border-radius: 4px;
+    margin-top: 30px;
+}    
+@media(max-width:769px){
+    .form_div{
+        width: 80vw;
+    }
+
+    
+}
+
+/*  Auth Section Style */
+.auth_section{
+    width:100%;
+}
+.login_box{
+    width: 40%;
+    margin: 0 auto;
+}
+.login_btn{
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #00C9FF, #92FE9D);
+    outline:none;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    transition: 350ms;
+
+}
+.login_btn:hover{
+    transform: scale(1.1)
+}
+.google_login{
+   display:grid;
+   place-items: center;   
+}
+@media(max-width: 769px){
+    .login_box{
+        width: 80%;
+    }
+    
+}
+
+/*  Create Bio */
+.form_section{
+    width: 100%;
+}
+.bio_type{
+    display:grid;
+    place-items: center;
+}
+.about_u{
+    width: 40%;
+     display:grid;
+     place-items: center;
+    margin: 0 auto;
+}
+
+@media(max-width: 769px){
+    .about_u{
+        width:80%;
+       
+
+    }
+}
+                /* Show Bio Container */
+
+.card{
+    width: 80%;
+    height:470px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+} 
+.card:hover{
+    transform: scale(1.1);
+}  
+.bio_type{
+    background: #6c0092;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+   
+}   
+.bio_type img{
+    width: 120px
+}
+.bio_text{
+    /* text-align: center; */
+     padding: 50px 0px;
+     font-size: 15px;
+}   
+.seeBtn{
+    outline:none;
+    border: none;
+    border-radius: 4px;
+    background: #6c0092;
+    color: #fff;
+    padding: 5px 10px;
+    transition: all 0.3s ease-out;
+}   
+.seeBtn:hover{
+    background: #5A1286;
+}    
