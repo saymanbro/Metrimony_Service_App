@@ -4,10 +4,8 @@ export  const Bio = (bio=[], action) =>{
 
     
             
-        case "USER_LOGIN" :
-        localStorage.setItem('profile', JSON.stringify(action?.token)) 
-            return   action?.token;
-
+     
+     
         case "FETCH_ALL" :return action.payload;
 
         case 'POST_BIO': return [ ...bio, action.payload];
@@ -18,6 +16,21 @@ export  const Bio = (bio=[], action) =>{
         default :return bio;
     }
 }
+export  const Auth = (auth=[], action) =>{
+    switch(action.type) {
+
+     
+        case "USER_LOGOUT": localStorage.clear();
+          return null    
+        case "USER_LOGIN" :
+        localStorage.setItem('profile', JSON.stringify(action?.payload)) 
+            return  action.payload;
+ 
+       
+        default :return auth;
+    }
+}
+
 
 
 

@@ -1,26 +1,20 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import {FcGoogle} from 'react-icons/fc'
 import {GoogleLogin} from 'react-google-login';
-import { UserContext } from '../../App';
-import { useHistory, useLocation } from 'react-router-dom';
+
 import { useDispatch } from 'react-redux';
 import { loggedUserInLocalStorage } from '../../Action/action';
-const Auth = () => {
-    const [loggedUser,setLoggedUser] = useContext(UserContext)
-    const dispatch = useDispatch();
-    const history = useHistory()
-    const location = useLocation()
-    const { token } = loggedUser;
-    let { from } = location.state || { from: { pathname: "/" } };
 
+
+
+const Auth = () => {
+   
+    const dispatch = useDispatch();
+ 
 
     const googleSuccess = async (res) => {
-        const result = res?.profileObj;
-       const   token = res?.tokenId ;
-        setLoggedUser(result); 
-        history.replace(from);
-        dispatch(loggedUserInLocalStorage(token))
-
+        const result = res?.profileObj;     
+        dispatch(loggedUserInLocalStorage(result))    
     }
 
 

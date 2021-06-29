@@ -36,7 +36,7 @@ const Home = () => {
     useEffect(()=> {
         dispatch(getBios());
         
-    }, [])
+    }, [dispatch])
   
     return (
         <>
@@ -90,7 +90,7 @@ const Home = () => {
                         <div className="col-12 col-md-8 order-0 order-md-1">
                         <div className="main_heading mt-md-5 mt-3 text-center text-white ">
                         <h2 className=" ">
-                        যে ব্যক্তি বিয়ে করলো সে তার অর্ধেক দ্বীন পূর্ণ  <br /> করে ফেললো। বাকি অর্ধেকের জন্য সে <br /> আল্লাহকে ভয় করুক।
+                        যে ব্যক্তি বিয়ে করলো সে তার অর্ধেক দ্বীন  <br /> পূর্ণ  করে ফেললো। বাকি অর্ধেকের জন্য <br />  সে আল্লাহকে ভয় করুক।
                         </h2>
                      
                         <p>বায়হাকী, শু’আবুল ঈমান – ৫৪৮৬</p>

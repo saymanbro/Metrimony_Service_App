@@ -17,25 +17,25 @@ const openBio = ()  => history.push(`/bioDetails/${bio._id}`)
                             <div className="bio_type">
                                 <img src={ bio.gender === 'boy' ? bio_img : bio_img_girl} className='mx-auto' alt="" />
                             <h6 className='my-2'>Bio Data Number</h6>
-                            <h6>{index}</h6>
+                            <h6>{index + 1}</h6>
                             </div>
                             <div className="bio_text mx-auto">
                             <table className="">
                                 <tbody>
                                 <tr >
-                                    <td>বৈবাহিক অবস্থা</td>
-                                    :
+                                    <td>বৈবাহিক অবস্থা :</td>
+                               
                                     <td className='text-center ps-1'>{bio.marrystatus}</td>
                                 </tr>
                                 
                                 <tr >
-                                    <td>শিক্ষাগত যোগ্যতা</td>
-                                    :
+                                    <td>শিক্ষাগত যোগ্যতা :</td>
+                                
                                     <td className='text-center ps-1'>{bio.education}</td>
                                 </tr>
                                 <tr >
-                                    <td>পেশা</td>
-                                    :
+                                    <td>পেশা :</td>
+                                
                                     <td className='text-center ps-1'>{bio.profession}</td>
                                     
                                 </tr>

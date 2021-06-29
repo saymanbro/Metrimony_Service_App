@@ -38,14 +38,10 @@ export const searchBioByField = (bio) => async (dispatch) => {
 
                 //  set User when he or she Login ///
 
-export const loggedUserInLocalStorage = (token) => async (dispatch)=>{
+export const loggedUserInLocalStorage = (profile) => async (dispatch)=>{
         try{
-             
-              
-                dispatch({type: 'USER_LOGIN',  token});
-               
+                dispatch({type: 'USER_LOGIN', payload: profile});
         }catch(e){
             console.log(e);
         }
-
 }

@@ -20,7 +20,7 @@ const { id} = useParams();
                             < div key={bio._id} style={{display:'grid', placeItems:'center'}}  className='mt-2'>             
 
                          
-                            <img src={bio.gender === 'boy' ? boyImg : girlImg } style={{width:'250px'}} className='img-fluid mx-auto' />
+                            <img src={bio.gender === 'boy' ? boyImg : girlImg } style={{width:'250px'}} className='img-fluid mx-auto' alt='img' />
                         
 
                           <table className='mx-auto'>
@@ -29,7 +29,9 @@ const { id} = useParams();
                                     <tr className=' mt-3 bg-light'> 
                                           <td>Name : </td> 
                                           <td></td>
-                                          <td >Sayman</td>
+                                          <td >
+                                            {bio.name}
+                                          </td>
                                       </tr>
                                     <tr className=' mt-3 bg-light'> 
                                          <td>Education : </td> 

@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 
-import {Bio }from './index';
+import {Bio , Auth}from './index';
 
-const allReducers =  combineReducers({Bio });
+const allReducers =  combineReducers({Bio, Auth });
 export default allReducers;

@@ -11,7 +11,7 @@ const User = ({bio, index}) => {
                         <div className="bio_type">
                             <img src={ bio.gender === 'boy' ? bio_img : bio_img_girl} className='mx-auto' alt="" />
                         <h6 className='my-2'>Bio Data Number</h6>
-                        <h6>{index}</h6>
+                        <h6>{index+1}</h6>
                         </div>
                         <div className="bio_text mx-auto">
                         <table className="">
